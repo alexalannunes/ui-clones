@@ -1,5 +1,5 @@
 # ui-clones
 
-## Education Dashbpard
+## Education Dashboard
 
 [Education Dashboard](./education-dashboard)
