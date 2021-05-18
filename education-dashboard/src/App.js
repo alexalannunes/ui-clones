@@ -1,24 +1,49 @@
-import { colors } from "./ui/colors";
-
 function App() {
   return (
     <div className="dashboard">
-      <div className="dashboard__menu">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto
-        nisi tenetur libero? Asperiores, velit voluptatem. Facilis dignissimos
-        nemo, cum repellendus necessitatibus blanditiis soluta similique qui
-        repellat perspiciatis illo cupiditate!
-        {colors.map((i) => (
-          <div
-            style={{ width: 30, height: 30, borderRadius: 10, background: i }}
-          />
-        ))}
-      </div>
+      <ul className="dashboard__menu flex column ai-center">
+        <li className="menu__item menu__item__first">
+          <span className="material-icons-round menu__icon">drag_handle</span>
+        </li>
+
+        <li className="menu__item">
+          <span className="material-icons-outlined menu__icon">home</span>
+        </li>
+        <li className="menu__item">
+          <span className="material-icons-outlined menu__icon">
+            account_circle
+          </span>
+        </li>
+        <li className="menu__item">
+          <span className="material-icons-outlined menu__icon">chat</span>
+        </li>
+        <li className="menu__item">
+          <span className="material-icons-round menu__icon">event</span>
+        </li>
+        <li className="menu__item">
+          <span className="material-icons-round menu__icon">schedule</span>
+        </li>
+        <li className="menu__item">
+          <span className="material-icons-outlined menu__icon">settings</span>
+        </li>
+      </ul>
       <div className="dashboard__content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-        recusandae cumque fugiat cum. Blanditiis, cumque illo? Suscipit
-        praesentium vero necessitatibus, quos corrupti quod tempore! Perferendis
-        eligendi recusandae sit doloribus quam.
+        <div className="content__header flex ai-center jc-between">
+          <div className="flex ai-center">
+            <h2 className="content__title">Dashboard</h2>
+            <input />
+          </div>
+          <div className="flex ai-center">
+            <span className="material-icons-outlined">notifications</span>
+            <span className="material-icons-round">add</span>
+            <img
+              src="https://github.com/alexalannunes.png"
+              width="50"
+              alt="a"
+            />
+            <h4>alex</h4>
+          </div>
+        </div>
       </div>
     </div>
   );
