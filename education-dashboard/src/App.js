@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { colors } from "./ui/colors";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="dashboard">
+      <div className="dashboard__menu">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto
+        nisi tenetur libero? Asperiores, velit voluptatem. Facilis dignissimos
+        nemo, cum repellendus necessitatibus blanditiis soluta similique qui
+        repellat perspiciatis illo cupiditate!
+        {colors.map((i) => (
+          <div
+            style={{ width: 30, height: 30, borderRadius: 10, background: i }}
+          />
+        ))}
+      </div>
+      <div className="dashboard__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+        recusandae cumque fugiat cum. Blanditiis, cumque illo? Suscipit
+        praesentium vero necessitatibus, quos corrupti quod tempore! Perferendis
+        eligendi recusandae sit doloribus quam.
+      </div>
     </div>
   );
 }
