@@ -10,6 +10,7 @@
 
 body {
   background-color: var(--current-theme);
+  color: var(--dark);
 }
 
 .dashboard__menu {
@@ -42,7 +43,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease-out;
   will-change: background, color;
   color: var(--dark);
   cursor: pointer;
@@ -56,11 +57,80 @@ ul {
 .dashboard__content {
   background-color: #fff;
   border-radius: 40px;
-  padding: 40px 20px;
+  padding: 30px 20px 20px 40px;
   box-shadow: 1px 3px 23px 0px rgb(0 0 0 / 5%);
   margin: 20px 20px 20px var(--menu-width);
 }
 
 .content__title {
   margin: 0;
+  color: var(--dark);
+}
+
+.search__container {
+  margin-left: 30px;
+}
+
+.header__input__icon {
+  position: absolute;
+  left: 15px;
+  color: #bdc0d0;
+}
+
+.header__search__input {
+  padding: 12px 12px 12px 50px;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--light);
+  outline: none;
+  font-size: 15px;
+}
+
+.header__image__user {
+  width: 35px;
+  height: 35px;
+}
+
+.header__name__user {
+  margin-left: 10px;
+}
+
+.header__icon__actions {
+  margin-right: 40px;
+}
+
+.icon__action {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: relative;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.icon__action:first-child {
+  margin-right: 10px;
+}
+
+.icon__action--filled {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.icon__action--badged:hover {
+  background-color: var(--light);
+}
+
+.icon__action--badged::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 100px;
+  background-color: var(--danger);
+  top: 7px;
+  right: 7px;
 }

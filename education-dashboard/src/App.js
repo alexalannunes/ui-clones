@@ -31,17 +31,36 @@ function App() {
         <div className="content__header flex ai-center jc-between">
           <div className="flex ai-center">
             <h2 className="content__title">Dashboard</h2>
-            <input />
+            <div className="relative flex ai-center search__container">
+              <span className="header__input__icon material-icons-outlined">
+                search
+              </span>
+              <input placeholder="Search" className="header__search__input" />
+            </div>
           </div>
           <div className="flex ai-center">
-            <span className="material-icons-outlined">notifications</span>
-            <span className="material-icons-round">add</span>
+            <div className="header__icon__actions flex ai-center">
+              <span className="icon__action icon__action--filled material-icons-round">
+                add
+              </span>
+              <span className="icon__action icon__action--badged material-icons-outlined">
+                notifications
+              </span>
+            </div>
             <img
               src="https://github.com/alexalannunes.png"
-              width="50"
-              alt="a"
+              alt="user"
+              className="header__image__user br-100"
             />
-            <h4>alex</h4>
+            <strong className="header__name__user">Alex A. N.</strong>
+          </div>
+        </div>
+        <div className="dashboard__body">
+          <div className="flex ai-center">
+            <div className="ddd">
+              <h2>Find your teacher</h2>
+            </div>
+            <div className="dkk">ldkelkdew</div>
           </div>
         </div>
       </div>
