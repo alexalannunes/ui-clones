@@ -247,12 +247,16 @@ ul {
 
 .schedule-grid__item {
   border: 1px solid #ccc;
-  flex: 1;
+}
+
+.schedule-grid__item--padding {
+  padding: 0 50px;
 }
 
 .schedule-teacher__information {
   border-radius: 40px;
   background-color: var(--light);
+  width: 255px;
 }
 
 .schedule-teacher__img {
@@ -290,6 +294,43 @@ ul {
   border-radius: 100px;
   border: none;
   padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.schedule__day__box {
+  border: 1px solid var(--gray);
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 178px;
+}
+
+.schedule__day_box--selected {
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+.scheule__day__number {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.schedule__day__month-name,
+.schedule__day__week-name {
+  font-size: 16px;
+}
+
+.schedule__day__month-name {
+  font-weight: 400;
+}
+
+.schedule__day__week-name {
+  font-weight: bold;
+}
+
+.schedule-grid__item__times > span {
+  letter-spacing: 0px;
 }
 
 .myc__list-item {

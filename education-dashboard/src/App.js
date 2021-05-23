@@ -1,4 +1,5 @@
 import { teatchers } from "./mock/teachers";
+import schedules from "./mock/schedules/days.json";
 
 function App() {
   return (
@@ -145,7 +146,7 @@ function App() {
                   </div>
                 </div>
                 <div className="schedule__grid">
-                  <div className="schedule-grid__item">
+                  <div className="schedule-grid__item flex-1">
                     <div className="schedule-teacher__information flex column">
                       <div className="schedule-teacher__image-container flex ai-center jc-center">
                         <img
@@ -174,8 +175,37 @@ function App() {
                       </div>
                     </div>
                   </div>
-                  <div className="schedule-grid__item"></div>
-                  <div className="schedule-grid__item"></div>
+                  <div className="schedule-grid__item schedule-grid__item--padding flex column flex-2">
+                    {schedules.map((i, x) => (
+                      <div
+                        className="flex ai-center jc-between flex-1 ai-baseline"
+                        key={x}
+                      >
+                        <div className="schedule-grid__item__days flex column">
+                          <div
+                            className={`schedule__day__box ${
+                              x === 1 && "schedule__day_box--selected"
+                            } flex ai-center`}
+                          >
+                            <span className="scheule__day__number">
+                              {i.day}
+                            </span>
+                            <div className="flex column">
+                              <span className="schedule__day__month-name">
+                                {i.month}
+                              </span>
+                              <span className="schedule__day__week-name">
+                                {i.weekName}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="schedule-grid__item__times text-light">
+                          <span>{i.schedules}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

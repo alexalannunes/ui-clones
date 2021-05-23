@@ -49,6 +49,18 @@ body,
   align-items: center;
 }
 
+.ai-start {
+  align-items: flex-start;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
 .flex {
   display: flex;
 }
@@ -83,4 +95,12 @@ body,
 
 .text-light {
   font-weight: 300;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "day": 12,
+    "month": "Dec",
+    "weekName": "Monday",
+    "schedules": "10:00-12:00pm"
+  },
+  {
+    "day": 13,
+    "month": "Dec",
+    "weekName": "Tuesday",
+    "schedules": "10:00-12:00pm"
+  },
+  {
+    "day": 14,
+    "month": "Dec",
+    "weekName": "Wednesday",
+    "schedules": "10:00-12:00pm"
+  }
+]
