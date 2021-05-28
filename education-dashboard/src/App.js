@@ -1,5 +1,6 @@
 import { teatchers } from "./mock/teachers";
 import schedules from "./mock/schedules/days.json";
+import courses from "./mock/courses/index.json";
 
 function App() {
   return (
@@ -119,9 +120,7 @@ function App() {
                   <h2>Schedule</h2>
 
                   <div className="flex ai-center">
-                    <span className="text-light schedule__date">
-                      Oct 08, 2020
-                    </span>
+                    <span className="schedule__date">Oct 08, 2020</span>
                     <div className="dropdown__select dropdown__select--dark relative">
                       <div className="flex ai-center">
                         <span className="dropdown__selected">
@@ -178,13 +177,19 @@ function App() {
                   <div className="schedule-grid__item schedule-grid__item--padding flex column flex-2">
                     {schedules.map((i, x) => (
                       <div
-                        className="flex ai-center jc-between flex-1 ai-baseline"
+                        className={`flex ai-center jc-between flex-1 ${
+                          x === 0 ? "ai-baseline" : ""
+                        }`}
                         key={x}
                       >
-                        <div className="schedule-grid__item__days flex column">
+                        <div
+                          className={`schedule-grid__item__days flex column ${
+                            x === 2 ? "as-flex-end" : ""
+                          }`}
+                        >
                           <div
                             className={`schedule__day__box ${
-                              x === 1 && "schedule__day_box--selected"
+                              x === 1 ? "schedule__day_box--selected" : ""
                             } flex ai-center`}
                           >
                             <span className="scheule__day__number">
@@ -210,21 +215,19 @@ function App() {
               </div>
             </div>
             <div className="my-courses__side flex column">
-              <h3>My Courses</h3>
+              <h2>My Courses</h2>
 
               <div className="myc__list">
-                {[1, 2, 3, 4].map((i) => (
-                  <div className="myc__list-item" key={i}>
+                {courses.map((i, x) => (
+                  <div className="myc__list-item" key={x}>
                     <div className="flex ai-center jc-between">
                       <div className="flex ai-center">
                         <div className="myc__icon__img">
-                          <span className="material-icons-round">
-                            receipt_long
-                          </span>
+                          <span className={i.iconFamily}>{i.iconName}</span>
                         </div>
                         <div className="flex column myc__information">
-                          <strong className="myc__name">English</strong>
-                          <span className="myc__hours">20 Hours</span>
+                          <strong className="myc__name">{i.name}</strong>
+                          <span className="myc__hours">{i.hours} Hours</span>
                         </div>
                       </div>
                       <div className="myc__list-item__action">
@@ -238,41 +241,51 @@ function App() {
                 ))}
               </div>
 
-              <h3>Account Progress</h3>
+              <h2>Account Progress</h2>
 
-              <svg style={{ width: 200, height: 200 }}>
-                <circle
-                  cy={100}
-                  cx={100}
-                  stroke="#909090"
-                  fill="transparent"
-                  r={50}
-                  strokeWidth={10}
-                  strokeDasharray={5}
-                ></circle>
-                <circle
-                  cy={100}
-                  cx={100}
-                  stroke="red"
-                  fill="transparent"
-                  r={50}
-                  strokeWidth={10}
-                  strokeDasharray={140}
-                  strokeDashoffset={30}
-                ></circle>
-                <circle
-                  cy={100}
-                  cx={100}
-                  stroke="#000"
-                  fill="none"
-                  r={50}
-                  strokeWidth={10}
-                  strokeDasharray={5}
-                />
-                <text x="50%" y="50%" textAnchor="middle" stroke="var(--dark)">
-                  78%
-                </text>
-              </svg>
+              <div className="flex ai-center jc-center">
+                <svg
+                  style={{ width: 250, height: 250, border: "1px solid #ccc" }}
+                >
+                  <circle
+                    cy={250 / 2}
+                    cx={250 / 2}
+                    stroke="#909090"
+                    fill="transparent"
+                    r={100}
+                    strokeWidth={10}
+                    strokeDasharray={5}
+                  ></circle>
+                  <circle
+                    cy={100}
+                    cx={100}
+                    stroke="red"
+                    fill="transparent"
+                    r={50}
+                    strokeWidth={10}
+                    strokeDasharray={140}
+                    strokeDashoffset={30}
+                  ></circle>
+                  <circle
+                    cy={100}
+                    cx={100}
+                    stroke="#000"
+                    fill="none"
+                    r={50}
+                    strokeWidth={10}
+                    strokeDasharray={5}
+                  />
+                  <text
+                    x={250 / 2}
+                    y={250 / 2}
+                    fontSize={40}
+                    textAnchor="middle"
+                    stroke="var(--dark)"
+                  >
+                    78%
+                  </text>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

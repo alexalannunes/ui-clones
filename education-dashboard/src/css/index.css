@@ -151,7 +151,7 @@ ul {
   flex: 1;
   background-color: var(--light);
   border-radius: 40px;
-  padding: 20px;
+  padding: 10px 40px;
 }
 
 .dropdown__select {

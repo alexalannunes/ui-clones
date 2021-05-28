@@ -1,0 +1,26 @@
+[
+  {
+    "name": "English",
+    "iconFamily": "material-icons-round",
+    "iconName": "receipt_long",
+    "hours": 20
+  },
+  {
+    "name": "Spoken course",
+    "iconFamily": "material-icons-round",
+    "iconName": "recent_actors",
+    "hours": 40
+  },
+  {
+    "name": "Writing course",
+    "iconFamily": "material-icons-round",
+    "iconName": "history_edu",
+    "hours": 20
+  },
+  {
+    "name": "Language couse",
+    "iconFamily": "material-icons-round",
+    "iconName": "book",
+    "hours": 20
+  }
+]
