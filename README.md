@@ -2,4 +2,6 @@
 
 ## Education Dashboard
 
-[Education Dashboard](./education-dashboard)
+[View demo](./education-dashboard)
+
+![Image of Yaktocat](./education-dashboard/demo.png)
