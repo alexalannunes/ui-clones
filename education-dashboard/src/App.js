@@ -1,6 +1,7 @@
 import { teatchers } from "./mock/teachers";
 import schedules from "./mock/schedules/days.json";
 import courses from "./mock/courses/index.json";
+import { CircularProgressBar } from "./chart";
 
 function App() {
   return (
@@ -244,47 +245,13 @@ function App() {
               <h2>Account Progress</h2>
 
               <div className="flex ai-center jc-center">
-                <svg
-                  style={{ width: 250, height: 250, border: "1px solid #ccc" }}
-                >
-                  <circle
-                    cy={250 / 2}
-                    cx={250 / 2}
-                    stroke="#909090"
-                    fill="transparent"
-                    r={100}
-                    strokeWidth={10}
-                    strokeDasharray={5}
-                  ></circle>
-                  <circle
-                    cy={100}
-                    cx={100}
-                    stroke="red"
-                    fill="transparent"
-                    r={50}
-                    strokeWidth={10}
-                    strokeDasharray={140}
-                    strokeDashoffset={30}
-                  ></circle>
-                  <circle
-                    cy={100}
-                    cx={100}
-                    stroke="#000"
-                    fill="none"
-                    r={50}
-                    strokeWidth={10}
-                    strokeDasharray={5}
-                  />
-                  <text
-                    x={250 / 2}
-                    y={250 / 2}
-                    fontSize={40}
-                    textAnchor="middle"
-                    stroke="var(--dark)"
-                  >
-                    78%
-                  </text>
-                </svg>
+                <CircularProgressBar
+                  sqSize={200}
+                  percentage={75}
+                  strokeWidth={30}
+                />
+
+                {/* <AppChart /> */}
               </div>
             </div>
           </div>
