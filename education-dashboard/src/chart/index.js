@@ -28,7 +28,7 @@ class CircularProgressBar extends React.Component {
       strokeWidth: `${strokeWidth}px`,
     };
 
-    console.log(this.props);
+    // console.log(this.props);
 
     return (
       <svg width={sqSize} height={sqSize} viewBox={viewBox}>
@@ -60,7 +60,7 @@ class CircularProgressBar extends React.Component {
             fill: "none",
             strokeDasharray: 10,
             strokeDashoffset: 10,
-            strokeWidth: 50,
+            strokeWidth: 34,
           }}
         />
         <text
@@ -93,14 +93,14 @@ class AppChart extends React.Component {
       percentage: 75,
     };
 
-    this.handleChangeEvent = this.handleChangeEvent.bind(this);
+    // this.handleChangeEvent = this.handleChangeEvent.bind(this);
   }
 
-  handleChangeEvent(event) {
-    this.setState({
-      percentage: event.target.value,
-    });
-  }
+  // handleChangeEvent(event) {
+  //   this.setState({
+  //     percentage: event.target.value,
+  //   });
+  // }
 
   render() {
     return (

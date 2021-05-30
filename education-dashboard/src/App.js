@@ -244,14 +244,22 @@ function App() {
 
               <h2>Account Progress</h2>
 
-              <div className="flex ai-center jc-center">
+              <div className="flex ai-center jc-center chart__dashed__container">
                 <CircularProgressBar
-                  sqSize={200}
-                  percentage={75}
+                  sqSize={190}
+                  percentage={70}
                   strokeWidth={30}
                 />
+              </div>
 
-                {/* <AppChart /> */}
+              <div className="chart__dashed__container">
+                <span className="progress__title">Progress</span>
+                <div className="progress">
+                  <div
+                    className="progress__fill"
+                    style={{ width: "70%" }}
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
