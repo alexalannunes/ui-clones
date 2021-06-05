@@ -1,6 +1,6 @@
 # ui-clones :tada:
 
-## All demos
+<!-- ## All demos
 
 Access all UI-Clones :point_right:
 [https://alexalannunes.github.io/ui-clones](https://alexalannunes.github.io/ui-clones/)
@@ -13,4 +13,4 @@ ___
 —
 [View source](./education-dashboard)
 
-![Image of Yaktocat](./education-dashboard/demo.png)
+![Image](./education-dashboard/demo.png) -->
