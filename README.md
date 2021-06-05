@@ -13,4 +13,4 @@ ___
 —
 [View source](./education-dashboard)
 
-![Image](./education-dashboard/demo.png) -->
+![Image](./education-dashboard/demo.png)
