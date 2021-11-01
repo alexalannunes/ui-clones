@@ -6,4 +6,4 @@
 
 ## Clone
 
-![Image of Yaktocat](./demo.png)
+![demo](./demo.png)
