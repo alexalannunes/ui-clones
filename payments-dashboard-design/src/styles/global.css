@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  letter-spacing: -1px;
 }
 
 body {
@@ -27,6 +26,7 @@ html,
 body,
 #root {
   height: 100%;
+  font-weight: 400;
 }
 
 .jc-center {
@@ -107,4 +107,12 @@ body,
 
 .as-flex-end {
   align-self: flex-end;
+}
+
+.h100p {
+  height: 100%;
+}
+
+.border {
+  border: 1px solid #ccc;
 }

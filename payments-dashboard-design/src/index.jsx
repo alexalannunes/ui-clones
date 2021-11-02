@@ -4,6 +4,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/global.css";
 
+export function clx(...classes) {
+  return classes.join(" ");
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
