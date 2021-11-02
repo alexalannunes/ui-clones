@@ -1,3 +1,13 @@
+:root {
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 10px;
+  --fs-22: 12px;
+  --fs-24: 14px;
+  --fs-26: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -80,7 +90,12 @@ body,
 .m-0 {
   margin: 0 !important;
 }
-
+.m-l-15 {
+  margin-left: 15px;
+}
+.m-r-15 {
+  margin-right: 15px;
+}
 .p-0 {
   padding: 0 !important;
 }
@@ -115,4 +130,8 @@ body,
 
 .border {
   border: 1px solid #ccc;
+}
+
+.shadow {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.33);
 }

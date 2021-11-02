@@ -5,7 +5,7 @@ import styles from "./content.module.css";
 
 function Content() {
   return (
-    <div className={clx("border", styles.contentContainer)}>
+    <div className={clx(styles.contentContainer)}>
       <div className="flex ai-center jc-between">
         <div className="flex column">
           <h2>Payments</h2>

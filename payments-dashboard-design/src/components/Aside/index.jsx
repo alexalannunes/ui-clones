@@ -3,7 +3,7 @@ import { clx } from "../..";
 import styles from "./aside.module.css";
 function Aside() {
   return (
-    <div className={clx("border", styles.asideContainer)}>
+    <div className={clx(styles.asideContainer)}>
       <div className="flex ai-center">
         <h2>New payment</h2>
         <button>Clear</button>
