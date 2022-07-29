@@ -1,8 +1,11 @@
+@import "./theme.scss";
+
 * {
   box-sizing: border-box;
 }
 html {
   font-size: 16px;
+  color: $ui-dark;
 }
 body {
   margin: 0;
