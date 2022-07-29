@@ -1,9 +1,14 @@
 $ui-main: #7d71ff;
 $ui-main-light: #efe9ff;
 $ui-light: #ffffff;
-$ui-dark: #efe9ff;
+$ui-dark: #070045;
 $ui-blue-light: #9abfcc;
 $ui-orange: #eb7e51;
 $ui-orange-light: #ffe6c7;
 $ui-green-light: #bae6a8;
-$ui-green-dark: #46704f;
+$ui-green-dark: #0d423a;
+$ui-green-dark-2: #8dcea0;
+
+@mixin display-flex {
+  display: flex;
+}
