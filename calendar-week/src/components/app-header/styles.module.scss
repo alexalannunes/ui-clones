@@ -1,7 +1,128 @@
+@import "../../styles/theme.scss";
+
 .container {
   width: 100%;
-  height: 50px;
-  background-color: red;
+  @include display-flex;
+  align-items: center;
+  background-color: $ui-green-light;
+  color: $ui-green-dark;
 
   grid-area: header;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding-right: 1rem;
+
+    .leftSide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $ui-main;
+
+        .logoContent {
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          background-color: $ui-green-dark-2;
+          color: $ui-dark;
+          height: 38px;
+          width: 38px;
+          border-radius: 6px;
+        }
+      }
+
+      .menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 0.5rem;
+
+        li {
+          padding: 7px 12px;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+          font-family: "Roboto";
+          font-weight: 500;
+          transition: background 0.1s linear;
+
+          &:hover {
+            background-color: $ui-green-dark-2;
+          }
+        }
+      }
+    }
+    .rightSide {
+      @include display-flex;
+      align-items: center;
+      gap: 1rem;
+
+      .inputSearch {
+        position: relative;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 8px;
+          transform: translateY(-50%);
+          color: $ui-green-dark-2;
+          font-weight: 600;
+        }
+        input {
+          $vertical: 10px;
+          border-radius: 6px;
+          padding: $vertical 12px $vertical 2.25rem;
+          border: 2px solid $ui-green-dark-2;
+          background-color: transparent;
+          margin-right: 0.7rem;
+          font-family: "Roboto";
+        }
+      }
+
+      .rightSideIcon {
+        @include display-flex;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        align-self: center;
+        position: relative;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+      }
+
+      .rightSideIcon[data-icon="email"]::before {
+        content: "2";
+        position: absolute;
+        border-radius: 50%;
+        background-color: $ui-orange;
+        box-shadow: 0 3px 14px $ui-orange;
+        right: -2px;
+        top: -2px;
+        font-size: 0.8rem;
+        padding: 2px 6px;
+        font-weight: 500;
+        color: $ui-light;
+      }
+
+      .userAvatar {
+        $size: 45px;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        border: 2px solid $ui-light;
+      }
+    }
+  }
 }
