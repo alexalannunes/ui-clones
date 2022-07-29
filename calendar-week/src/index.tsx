@@ -1,15 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
+import "./styles/index.scss";
+import "./styles/theme.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeProvider } from "./theme/ThemeProvider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+// Todo: Can the theme be extended?
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
