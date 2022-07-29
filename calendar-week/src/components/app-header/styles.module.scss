@@ -104,6 +104,7 @@
 
       .rightSideIcon[data-icon="email"]::before {
         content: "2";
+        font-family: "Roboto Mono", monospace;
         position: absolute;
         border-radius: 50%;
         background-color: $ui-orange;
@@ -114,6 +115,7 @@
         padding: 2px 6px;
         font-weight: 500;
         color: $ui-light;
+        line-height: 1.2;
       }
 
       .userAvatar {
