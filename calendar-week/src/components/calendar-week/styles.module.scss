@@ -1,6 +1,11 @@
+@import "../../styles/theme.scss";
+
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   grid-area: content;
+  background-color: $ui-light;
+  padding: 10px;
+  border-top-right-radius: 1rem;
 }
