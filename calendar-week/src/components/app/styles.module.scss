@@ -1,9 +1,12 @@
+@import "../../styles/theme.scss";
+
 .container {
   display: grid;
   width: 100%;
   grid-template-columns: 80px 1fr;
   grid-template-rows: 60px 1fr;
   height: 100vh;
+  background-color: $ui-green-light;
 
   grid-template-areas:
     "header header"
