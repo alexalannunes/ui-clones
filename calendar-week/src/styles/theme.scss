@@ -12,3 +12,11 @@ $ui-green-dark-2: #8dcea0;
 @mixin display-flex {
   display: flex;
 }
+
+@mixin align-items($value) {
+  align-items: $value;
+}
+
+@mixin justify-content($value) {
+  justify-content: $value;
+}
