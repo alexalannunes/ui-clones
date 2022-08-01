@@ -8,4 +8,93 @@
   background-color: $ui-light;
   padding: 10px;
   border-top-right-radius: 1rem;
+
+  .calenderHeader {
+    padding: 0.8rem 1rem;
+
+    .rowFlex {
+      @include display-flex;
+      @include align-items(center);
+      @include justify-content(space-between);
+
+      font-family: "Roboto Mono", monospace;
+
+      .calendarDate {
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      .calendarActions {
+        @include display-flex;
+        @include align-items(center);
+        @include justify-content(space-between);
+        gap: 1.2rem;
+
+        span {
+          font-size: 0.9rem;
+          color: $ui-gray;
+        }
+
+        .calendarToggle {
+          @include display-flex;
+          @include align-items(center);
+          @include justify-content(space-between);
+          padding: 0.3rem 1rem;
+          border-radius: 100px;
+          background-color: red;
+          gap: 0.5rem;
+          background-color: rgba($color: $ui-gray, $alpha: 0.2);
+
+          button {
+            width: 6rem;
+            background-color: transparent;
+            border: none;
+            border-radius: 12px;
+            height: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: inherit;
+            cursor: pointer;
+          }
+          button:not(.toggleActiveOption) {
+            color: rgba($color: $ui-gray, $alpha: 0.7);
+          }
+          button.toggleActiveOption {
+            background-color: $ui-light;
+            box-shadow: 0 2px 9px rgba($color: #000000, $alpha: 0.2);
+          }
+        }
+      }
+
+      .rowTitleBreadcrumb {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+
+        span {
+          font-weight: 400;
+          color: $ui-gray;
+        }
+      }
+
+      .options {
+        $size: 38px;
+        border: 1px solid rgba($color: $ui-gray, $alpha: 0.6);
+        border-radius: 50%;
+        height: $size;
+        width: $size;
+        background-color: $ui-light;
+        font-family: "Roboto";
+        @include display-flex;
+        @include align-items(center);
+        @include justify-content(center);
+        cursor: pointer;
+
+        span {
+          font-weight: 600;
+          color: $ui-gray;
+        }
+      }
+    }
+  }
 }
