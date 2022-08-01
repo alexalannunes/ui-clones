@@ -5,13 +5,21 @@
   height: 100%;
   @include display-flex;
   @include align-items(center);
+  @include justify-content(space-between);
   flex-direction: column;
   border-right: 1px solid #ccc;
   background-color: $ui-light;
   border-top-left-radius: 1rem;
-  padding: 1.5em 0 0;
+  padding: 1.5em 0;
   grid-area: sidemenu;
   gap: 1rem;
+
+  .sideMenuTop {
+    @include display-flex;
+    @include align-items(center);
+    flex-direction: column;
+    gap: 1rem;
+  }
 
   .menuItem {
     $size: 40px;
@@ -36,5 +44,20 @@
 
   .fillPrimary {
     background-color: $ui-main;
+  }
+  .fillOrange {
+    background-color: $ui-orange;
+  }
+  .fillGray {
+    background-color: $ui-gray;
+  }
+  .customSize {
+    $size: 28px;
+    height: $size;
+    width: $size;
+  }
+
+  .itemSettings {
+    box-shadow: 0 0 0 1.4px rgba($color: $ui-gray, $alpha: 0.6);
   }
 }
