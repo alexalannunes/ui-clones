@@ -104,7 +104,14 @@
     border-top: 1px solid #ccc;
     margin-top: 1rem;
     @include display-flex;
-    height: 100%;
-    flex: 1 1 0;
+    overflow-y: auto;
+
+    .calendarTimes {
+      width: 100px;
+      background-color: rgba(68, 85, 85, 0.151);
+    }
+    .calendarDays {
+      flex: 1;
+    }
   }
 }

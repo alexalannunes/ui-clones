@@ -1,58 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
 
 function CalendarContent() {
-  const contentRef = useRef<HTMLDivElement | null>(null);
-
-  const [info, setInfo] = useState({
-    width: 100,
-  });
-
-  useEffect(() => {
-    function onResize() {
-      if (contentRef.current) {
-        const WIDTH = contentRef.current.clientWidth;
-        const HEIGHT = contentRef.current.clientHeight;
-        const MAX_DAYS_VIEW = 7;
-        const COLUMN_WIDTH = WIDTH / MAX_DAYS_VIEW;
-
-        console.log("oi", HEIGHT);
-        setInfo({
-          width: COLUMN_WIDTH,
-        });
-      }
-    }
-
-    onResize();
-
-    window.addEventListener("resize", onResize);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-    };
-  }, []);
-
   return (
     <div className={styles.content}>
-      <div
-        style={{ width: 100, backgroundColor: "#ccc", height: "100%" }}
-      ></div>
-      <div
-        ref={contentRef}
-        style={{ display: "flex", width: "calc(100% - 100px)" }}
-      >
-        {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-          <div
-            key={i}
-            style={{
-              flex: 1,
-              width: info.width,
-              borderRight: "1px solid #ccc",
-            }}
-          >
-            lorem
-          </div>
-        ))}
+      <div className={styles.calendarTimes}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+        deserunt illum consequatur quam provident reprehenderit, earum,
+        voluptates est veniam quae modi quis vel ducimus at ea et enim
+        perspiciatis numquam!
+      </div>
+      <div className={styles.calendarDays}>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto cum aut
+        dignissimos officia veritatis vel nihil consectetur atque, quas, ad
+        expedita tempore autem hic officiis. Voluptate fugiat cumque beatae
+        rerum?
       </div>
     </div>
   );
