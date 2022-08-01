@@ -6,7 +6,6 @@
   flex-direction: column;
   grid-area: content;
   background-color: $ui-light;
-  padding: 10px;
   border-top-right-radius: 1rem;
 
   .calenderHeader {
@@ -20,8 +19,10 @@
       font-family: "Roboto Mono", monospace;
 
       .calendarDate {
-        font-size: 2rem;
+        font-size: 2.1rem;
         margin: 0;
+        letter-spacing: -2px;
+        font-weight: 600;
       }
 
       .calendarActions {
@@ -33,6 +34,7 @@
         span {
           font-size: 0.9rem;
           color: $ui-gray;
+          font-weight: 500;
         }
 
         .calendarToggle {
@@ -96,5 +98,13 @@
         }
       }
     }
+  }
+
+  .content {
+    border-top: 1px solid #ccc;
+    margin-top: 1rem;
+    @include display-flex;
+    height: 100%;
+    flex: 1 1 0;
   }
 }
