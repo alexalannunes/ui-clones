@@ -101,17 +101,52 @@
   }
 
   .content {
+    $row-height: 80px;
+
     border-top: 1px solid #ccc;
     margin-top: 1rem;
     @include display-flex;
-    overflow-y: auto;
+    height: 700px;
 
     .calendarTimes {
       width: 100px;
       background-color: rgba(68, 85, 85, 0.151);
+
+      .timeRow {
+        height: $row-height;
+        border-bottom: 1px solid #ccc;
+      }
     }
     .calendarDays {
       flex: 1;
+      display: flex;
+
+      .calendarDaysColumn {
+        flex: 1 1 0;
+        border-right: 1px solid #ccc;
+        position: relative;
+
+        .columHeader {
+          border-bottom: 1px solid #ccc;
+          @include display-flex;
+          @include justify-content(center);
+          @include align-items(center);
+          min-height: $row-height;
+          font-weight: bold;
+          flex-direction: column;
+
+          h4 {
+            font-size: 2rem;
+            margin: 0;
+          }
+
+          span {
+            font-weight: 500;
+            color: $ui-gray;
+            font-size: 0.9rem;
+          }
+        }
+      }
     }
   }
 }

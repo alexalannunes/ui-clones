@@ -5,78 +5,21 @@ function CalendarContent() {
   return (
     <div className={styles.content}>
       <div className={styles.calendarTimes}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-        deserunt illum consequatur quam provident reprehenderit, earum,
-        voluptates est veniam quae modi quis vel ducimus at ea et enim
-        perspiciatis numquam! Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Iusto cum aut dignissimos officia veritatis vel nihil
-        consectetur atque, quas, ad expedita tempore autem hic officiis.
-        Voluptate fugiat cumque beatae rerum? Lorem ipsum dolor sit amet
+        {[8, 9, 10, 11, 12, 13, 14, 15, 16, 17].map((i) => (
+          <div key={i} className={styles.timeRow}>{`${i
+            .toString()
+            .padStart(2, "0")}:00`}</div>
+        ))}
       </div>
       <div className={styles.calendarDays}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto cum aut
-        dignissimos officia veritatis vel nihil consectetur atque, quas, ad
-        expedita tempore autem hic officiis. Voluptate fugiat cumque beatae
-        rerum? consectetur, adipisicing elit. Iusto cum aut dignissimos officia
-        veritatis vel nihil consectetur atque, quas, ad expedita tempore autem
-        hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum dolor
-        sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? consectetur,
-        adipisicing elit. Iusto cum aut dignissimos officia veritatis vel nihil
-        consectetur atque, quas, ad expedita tempore autem hic officiis.
-        Voluptate fugiat cumque beatae rerum? Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Iusto cum aut dignissimos officia
-        veritatis vel nihil consectetur atque, quas, ad expedita tempore autem
-        hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum dolor
-        sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? consectetur,
-        adipisicing elit. Iusto cum aut dignissimos officia veritatis vel nihil
-        consectetur atque, quas, ad expedita tempore autem hic officiis.
-        Voluptate fugiat cumque beatae rerum? Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Iusto cum aut dignissimos officia
-        veritatis vel nihil consectetur atque, quas, ad expedita tempore autem
-        hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum dolor
-        sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? consectetur,
-        adipisicing elit. Iusto cum aut dignissimos officia veritatis vel nihil
-        consectetur atque, quas, ad expedita tempore autem hic officiis.
-        Voluptate fugiat cumque beatae rerum? Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Iusto cum aut dignissimos officia
-        veritatis vel nihil consectetur atque, quas, ad expedita tempore autem
-        hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum dolor
-        sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum? Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Iusto cum aut dignissimos
-        officia veritatis vel nihil consectetur atque, quas, ad expedita tempore
-        autem hic officiis. Voluptate fugiat cumque beatae rerum?
+        {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+          <div className={styles.calendarDaysColumn} key={i}>
+            <div className={styles.columHeader}>
+              <h4>{i}</h4>
+              <span>Mon</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
